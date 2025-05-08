@@ -1,6 +1,5 @@
-
 import QRCodeGenerator from "@/components/QRCodeGenerator";
-import { QrCode } from "lucide-react";
+import { MessageSquare, Wifi as WifiIcon, Link2, UserRound, DownloadIcon, QrCode } from "lucide-react";
 
 const Index = () => {
   return (
@@ -35,7 +34,7 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-card p-6 rounded-lg border border-border flex flex-col items-center text-center">
               <div className="bg-qrOrange/20 p-4 rounded-full mb-4">
-                <Wifi size={24} className="text-qrOrange" />
+                <WifiIcon size={24} className="text-qrOrange" />
               </div>
               <h3 className="text-lg font-medium mb-2">Wi-Fi</h3>
               <p className="text-sm text-muted-foreground">
@@ -70,7 +69,7 @@ const Index = () => {
             
             <div className="bg-card p-6 rounded-lg border border-border flex flex-col items-center text-center">
               <div className="bg-qrOrange/20 p-4 rounded-full mb-4">
-                <WhatsApp size={24} className="text-qrOrange" />
+                <MessageSquare size={24} className="text-qrOrange" />
               </div>
               <h3 className="text-lg font-medium mb-2">WhatsApp</h3>
               <p className="text-sm text-muted-foreground">
@@ -80,7 +79,7 @@ const Index = () => {
             
             <div className="bg-card p-6 rounded-lg border border-border flex flex-col items-center text-center">
               <div className="bg-qrGreen/20 p-4 rounded-full mb-4">
-                <Link size={24} className="text-qrGreen" />
+                <Link2 size={24} className="text-qrGreen" />
               </div>
               <h3 className="text-lg font-medium mb-2">Links</h3>
               <p className="text-sm text-muted-foreground">
@@ -90,7 +89,7 @@ const Index = () => {
             
             <div className="bg-card p-6 rounded-lg border border-border flex flex-col items-center text-center">
               <div className="bg-qrOrange/20 p-4 rounded-full mb-4">
-                <Contact size={24} className="text-qrOrange" />
+                <UserRound size={24} className="text-qrOrange" />
               </div>
               <h3 className="text-lg font-medium mb-2">Contato</h3>
               <p className="text-sm text-muted-foreground">
@@ -100,7 +99,7 @@ const Index = () => {
             
             <div className="bg-card p-6 rounded-lg border border-border flex flex-col items-center text-center">
               <div className="bg-qrGreen/20 p-4 rounded-full mb-4">
-                <Download size={24} className="text-qrGreen" />
+                <DownloadIcon size={24} className="text-qrGreen" />
               </div>
               <h3 className="text-lg font-medium mb-2">Download</h3>
               <p className="text-sm text-muted-foreground">

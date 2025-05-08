@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { WhatsApp } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import { generateWhatsAppQR } from "@/lib/qrHelpers";
 
 interface WhatsAppFormProps {
@@ -49,7 +49,7 @@ const WhatsAppForm = ({ onGenerate }: WhatsAppFormProps) => {
       </div>
 
       <Button type="submit" className="w-full qr-button qr-button-primary">
-        <WhatsApp size={20} />
+        <MessageSquare size={20} />
         <span>Gerar QR Code WhatsApp</span>
       </Button>
     </form>
