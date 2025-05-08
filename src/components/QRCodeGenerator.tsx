@@ -8,7 +8,7 @@ import WhatsAppForm from "./forms/WhatsAppForm";
 import LinkForm from "./forms/LinkForm";
 import ContactForm from "./forms/ContactForm";
 import QRCodeDisplay from "./QRCodeDisplay";
-import { Wifi, Link, Contact, WhatsApp } from "lucide-react";
+import { Wifi, Link2, UserRound, MessageSquare } from "lucide-react";
 
 const QRCodeGenerator = () => {
   const [qrContent, setQrContent] = useState<string>("");
@@ -37,15 +37,15 @@ const QRCodeGenerator = () => {
                 <span>PIX</span>
               </TabsTrigger>
               <TabsTrigger value="whatsapp" className="flex items-center gap-2">
-                <WhatsApp size={16} />
+                <MessageSquare size={16} />
                 <span className="hidden sm:inline">WhatsApp</span>
               </TabsTrigger>
               <TabsTrigger value="link" className="flex items-center gap-2">
-                <Link size={16} />
+                <Link2 size={16} />
                 <span className="hidden sm:inline">Link</span>
               </TabsTrigger>
               <TabsTrigger value="contact" className="flex items-center gap-2">
-                <Contact size={16} />
+                <UserRound size={16} />
                 <span className="hidden sm:inline">Contato</span>
               </TabsTrigger>
             </TabsList>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Link } from "lucide-react";
+import { Link2 } from "lucide-react";
 import { generateLinkQR } from "@/lib/qrHelpers";
 
 interface LinkFormProps {
@@ -41,7 +41,7 @@ const LinkForm = ({ onGenerate }: LinkFormProps) => {
       </div>
 
       <Button type="submit" className="w-full qr-button qr-button-primary">
-        <Link size={20} />
+        <Link2 size={20} />
         <span>Gerar QR Code de Link</span>
       </Button>
     </form>

@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Download } from "lucide-react";
+import { DownloadIcon } from "lucide-react";
 import { downloadQRCode } from "@/lib/qrHelpers";
 import QRCode from "qrcode";
 
@@ -49,7 +49,7 @@ const QRCodeDisplay = ({ content, size = 200 }: QRCodeDisplayProps) => {
           onClick={() => downloadQRCode("qr-canvas", "qrcode-facil-br")}
           className="qr-button qr-button-secondary"
         >
-          <Download size={18} />
+          <DownloadIcon size={18} />
           <span>Baixar QR Code</span>
         </Button>
       </CardContent>
