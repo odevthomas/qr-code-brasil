@@ -1,6 +1,6 @@
 
 import QRCodeGenerator from "@/components/QRCodeGenerator";
-import { MessageSquare, Wifi as WifiIcon, Link2, UserRound, DownloadIcon, QrCode } from "lucide-react";
+import { MessageSquare, Wifi as WifiIcon, Link2, UserRound, DownloadIcon, QrCode, Share } from "lucide-react";
 
 const Index = () => {
   return (
@@ -85,6 +85,16 @@ const Index = () => {
               <h3 className="text-lg font-medium mb-2">Links</h3>
               <p className="text-sm text-muted-foreground">
                 Compartilhe links para sites e redes sociais de forma rápida e prática.
+              </p>
+            </div>
+            
+            <div className="bg-card p-6 rounded-lg border border-border flex flex-col items-center text-center">
+              <div className="bg-qrGreen/20 p-4 rounded-full mb-4">
+                <Share size={24} className="text-qrGreen" />
+              </div>
+              <h3 className="text-lg font-medium mb-2">Links Personalizados</h3>
+              <p className="text-sm text-muted-foreground">
+                Crie links personalizados com templates prontos para compartilhamento profissional.
               </p>
             </div>
             
