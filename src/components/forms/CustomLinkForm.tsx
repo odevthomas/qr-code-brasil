@@ -15,6 +15,7 @@ const CustomLinkForm = ({ onGenerate }: CustomLinkFormProps) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [url, setUrl] = useState("");
+  const [customSlug, setCustomSlug] = useState("");
   
   // Templates pré-definidos
   const templates = [
@@ -22,19 +23,22 @@ const CustomLinkForm = ({ onGenerate }: CustomLinkFormProps) => {
       name: "Portfolio Profissional", 
       url: "https://portfolio.exemplo.com.br", 
       title: "Meu Portfolio Profissional", 
-      description: "Confira meus projetos e habilidades"
+      description: "Confira meus projetos e habilidades",
+      slug: "portfolio"
     },
     { 
       name: "Cardápio Digital", 
       url: "https://menu.exemplo.com.br", 
       title: "Cardápio Digital", 
-      description: "Escaneie para ver nosso cardápio completo"
+      description: "Escaneie para ver nosso cardápio completo",
+      slug: "menu"
     },
     { 
       name: "Evento", 
       url: "https://evento.exemplo.com.br", 
       title: "Inscrição no Evento", 
-      description: "Garanta já sua vaga no nosso evento"
+      description: "Garanta já sua vaga no nosso evento",
+      slug: "evento"
     },
   ];
 
@@ -42,6 +46,7 @@ const CustomLinkForm = ({ onGenerate }: CustomLinkFormProps) => {
     setTitle(template.title);
     setDescription(template.description);
     setUrl(template.url);
+    setCustomSlug(template.slug || "");
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -60,6 +65,9 @@ const CustomLinkForm = ({ onGenerate }: CustomLinkFormProps) => {
     }
     if (description) {
       shareUrl.searchParams.append("desc", description);
+    }
+    if (customSlug) {
+      shareUrl.searchParams.append("slug", customSlug);
     }
     
     const qrContent = generateLinkQR(shareUrl.toString());
@@ -94,6 +102,23 @@ const CustomLinkForm = ({ onGenerate }: CustomLinkFormProps) => {
           onChange={(e) => setUrl(e.target.value)}
           required
         />
+      </div>
+      
+      <div className="flex flex-col gap-2">
+        <Label htmlFor="customSlug">URL Personalizada</Label>
+        <div className="flex items-center gap-2">
+          <span className="text-sm text-muted-foreground">qrfacil.br/</span>
+          <Input
+            id="customSlug"
+            placeholder="meu-link"
+            value={customSlug}
+            onChange={(e) => setCustomSlug(e.target.value)}
+            className="flex-1"
+          />
+        </div>
+        <span className="text-xs text-muted-foreground">
+          Crie um link curto e personalizado para seu QR Code
+        </span>
       </div>
       
       <div className="flex flex-col gap-2">
