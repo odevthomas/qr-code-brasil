@@ -1,3 +1,4 @@
+
 import QRCodeGenerator from "@/components/QRCodeGenerator";
 import { MessageSquare, Wifi as WifiIcon, Link2, UserRound, DownloadIcon, QrCode } from "lucide-react";
 
@@ -116,10 +117,19 @@ const Index = () => {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} QRCode Fácil BR. Todos os direitos reservados.
           </p>
-          <div className="flex items-center gap-2 mt-4 sm:mt-0">
+          <div className="flex flex-col sm:flex-row items-center gap-2 mt-4 sm:mt-0">
             <span className="text-sm text-muted-foreground">
               Feito com ♥ para o Brasil
             </span>
+            <a 
+              href="https://github.com/odevthomas" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-sm text-qrOrange hover:text-qrOrange/80 transition-colors flex items-center gap-1"
+            >
+              <span>Desenvolvido por</span>
+              <span className="font-semibold">@odevthomas</span>
+            </a>
           </div>
         </div>
       </footer>
