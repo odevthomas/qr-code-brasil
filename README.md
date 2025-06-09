@@ -2,7 +2,7 @@
 
 Um gerador de QR Code especializado para o padrão brasileiro Pix, permitindo a criação rápida e fácil de códigos QR para pagamentos instantâneos.
 
-![Uploading QRCODEBR.png…]()
+![QRCODEBR](https://github.com/user-attachments/assets/a68d6719-e8d4-4c4f-b41d-721d99be1804)
 
 
 ## 📋 Sobre o Projeto
