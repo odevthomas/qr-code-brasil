@@ -1,6 +1,7 @@
 # QR Fácil Brasil
 
 Um gerador de QR Code especializado para o padrão brasileiro Pix, permitindo a criação rápida e fácil de códigos QR para pagamentos instantâneos.
+
 ![Uploading QRCODEBR.png…]()
 
 
