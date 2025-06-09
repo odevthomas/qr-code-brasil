@@ -13,7 +13,7 @@ const Index = () => {
               <QrCode size={28} className="text-white" />
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-white">
-              QRCode Fácil BR
+              QRCODE BR
             </h1>
           </div>
           <p className="text-qrLight/80 max-w-2xl mx-auto text-lg">
