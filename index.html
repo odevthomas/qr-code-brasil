@@ -14,10 +14,32 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@qrfacilbrasil" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- QR Code library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const generateQRCode = (data) => {
+          const qr = qrcode(0, 'L');
+          qr.addData(data);
+          qr.make();
+          return qr.createSvgTag();
+        };
+
+        // Add your QR code generation logic here
+        window.generatePixQRCode = (pixData) => {
+          const qrCodeData = generateQRCode(pixData);
+          document.getElementById('qrcode-output').innerHTML = qrCodeData;
+        };
+      });
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
+    <div id="qrcode-output"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
